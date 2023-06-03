@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.thumbs-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.drawer a.active {
+    color: white;
+}
+
+.drawer a {
+    background-color: transparent;
+}
