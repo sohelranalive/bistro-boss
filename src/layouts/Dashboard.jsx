@@ -17,7 +17,7 @@ const Dashboard = () => {
 
 
     return (
-        <div className="drawer drawer-mobile">
+        <div className="drawer lg:drawer-open h-[100vh]">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
 
@@ -31,13 +31,13 @@ const Dashboard = () => {
                 <ul className="menu p-4 w-80 bg-[#D1A054] text-base-content">
                     {
                         isAdmin ? <>
-                            <li><NavLink to='/'><FaHome />Admin Home</NavLink></li>
+                            <li><NavLink to='/dashboard/adminhome'><FaHome />Admin Home</NavLink></li>
                             <li><NavLink to='/dashboard/addItem'><FaList /> Add Items</NavLink></li>
                             <li><NavLink to='/dashboard/manageItem'><FaBook /> Manage All Item</NavLink></li>
                             <li><NavLink to='/dashboard/allUser'><FaUsers /> All Users</NavLink></li>
                         </>
                             : <>
-                                <li><NavLink to='/'><FaHome /> Home</NavLink></li>
+                                <li><NavLink to='/dashboard/userhome'><FaHome /> Home</NavLink></li>
                                 <li><NavLink to='/'><FaCalendarAlt /> Reservation</NavLink></li>
                                 <li><NavLink to='/'><FaWallet /> Payment History</NavLink></li>
                                 <li>
@@ -60,3 +60,30 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
+// const Dashboard = () => {
+//     return (
+//         <div>
+//             <div className="drawer lg:drawer-open">
+//                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+//                 <div className="drawer-content flex flex-col items-center justify-center">
+//                     {/* Page content here */}
+//                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+
+//                 </div>
+//                 <div className="drawer-side">
+//                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+//                     <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+//                         {/* Sidebar content here */}
+//                         <li><a>Sidebar Item 1</a></li>
+//                         <li><a>Sidebar Item 2</a></li>
+//                     </ul>
+
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Dashboard;

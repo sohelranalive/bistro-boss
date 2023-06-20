@@ -5,7 +5,6 @@ import Menu from "../pages/Menu/Menu/Menu";
 import Order from "../pages/Order/Order/Order";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
-import Secret from "../pages/Shared/Secret/Secret";
 import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../layouts/Dashboard";
 import MyCart from "../pages/Dashboard/MyCart";
@@ -14,6 +13,8 @@ import AddItem from "../pages/AddItem/AddItem";
 import AdminRoute from "./AdminRoute";
 import ManageItem from "../pages/ManageItem/ManageItem";
 import Payment from "../pages/Payment/Payment";
+import Userhome from "../pages/Userhome/Userhome";
+import Adminhome from "../pages/Adminhome/Adminhome";
 
 const router = createBrowserRouter([
     {
@@ -39,10 +40,6 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup></Signup>
-            },
-            {
-                path: '/secret',
-                element: <PrivateRoute><Secret></Secret></PrivateRoute>
             }
         ]
     },
@@ -58,6 +55,10 @@ const router = createBrowserRouter([
                 path: 'payment',
                 element: <Payment></Payment>
             },
+            {
+                path: 'userhome',
+                element: <Userhome></Userhome>
+            },
             // admin route
             {
                 path: 'allUser',
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageItem',
                 element: <AdminRoute><ManageItem></ManageItem></AdminRoute>
+            },
+            {
+                path: 'adminhome',
+                element: <AdminRoute><Adminhome></Adminhome></AdminRoute>
             }
         ]
     }
